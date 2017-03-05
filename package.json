@@ -1,5 +1,8 @@
 {
-  "name": "y",
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "React soft boilerplate",
+  "main": "App.js",
   "scripts": {
     "build": "rimraf dist && webpack",
     "web": "./node_modules/.bin/webpack-dev-server --inline"
