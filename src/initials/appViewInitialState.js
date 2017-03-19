@@ -1,6 +1,5 @@
 import Immutable from 'immutable';
 
 export const initialState = new Immutable.Map({
-    history: new Immutable.Stack(),
-    language: null
+    history: new Immutable.Stack()
 });
