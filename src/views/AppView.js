@@ -9,11 +9,11 @@ import * as views from './index.js';
 export const AppView = connect(appViewSelector, appViewActions)((props) => {
     const CurrentView = views[props.activeViewName];
 
-    return <ViewScreen>
+    return <div>
         {
             CurrentView
                 ? <CurrentView />
                 : <div>{'Error 404: Some problem'}</div>
         }
-    </ViewScreen>
+    </div>
 });
