@@ -5,8 +5,10 @@
   "main": "App.js",
   "scripts": {
     "build": "rimraf dist && webpack",
-    "server": "./node_modules/.bin/webpack-dev-server --inline"
+    "start": "./node_modules/.bin/webpack-dev-server --inline"
   },
+  "repository": "https://github.com/ximet/ReactBoilerplate.git",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
@@ -27,9 +29,9 @@
   },
   "dependencies": {
     "immutable": "^3.8.1",
-    "moment": "^2.17.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "moment": "^2.18.1",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
