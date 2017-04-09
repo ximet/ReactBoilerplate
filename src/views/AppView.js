@@ -5,7 +5,6 @@ import { appViewSelector } from '../selectors/appViewSelector.js';
 import { appViewActions } from '../actions/appViewActions.js';
 import * as views from './index.js';
 
-
 export const AppView = connect(appViewSelector, appViewActions)((props) => {
     const CurrentView = views[props.activeViewName];
 

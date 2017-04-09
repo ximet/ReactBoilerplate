@@ -4,13 +4,11 @@ import reducer from '../reducers';
 
 
 export default function configureStore(initialState) {
-  const store = createStore(
+  return createStore(
     reducer,
     initialState,
     compose(
       applyMiddleware(thunk)
     )
   );
-
-  return store;
 };
