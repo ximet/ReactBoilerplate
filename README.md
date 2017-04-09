@@ -19,13 +19,13 @@
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+ReactBoilerplate requires [Node.js](https://nodejs.org/) v4+ to run.
 1. Clone this repo using git clone https://github.com/ximet/ReactBoilerplate.git
 2. Install the dependencies and devDependencies and start the server.
 
     ```sh
     $ cd ReacBoilerplate
-    $ npm install 
+    $ npm install
     $ node run start
     ```
 
