@@ -6,11 +6,9 @@ export default function appViewReducer (state = initialState, action) {
         case SET_ACTIVE_VIEW: {
             const { activeViewName } = action.values;
 
-            return state.update('history', () => {
-                return stack.push({
+            return state.update('history', history => history.push({
                     viewName: activeViewName
-                })
-            });
+                }));
         }
 
         default: {
