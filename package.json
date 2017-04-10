@@ -5,7 +5,9 @@
   "main": "App.js",
   "scripts": {
     "build": "rimraf dist && webpack",
-    "start": "./node_modules/.bin/webpack-dev-server --inline"
+    "start": "./node_modules/.bin/webpack-dev-server --inline",
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test:watch": "npm test -- --watch"
   },
   "repository": "https://github.com/ximet/ReactBoilerplate.git",
   "license": "MIT",
@@ -18,9 +20,11 @@
     "css-loader": "^0.25.0",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
+    "expect": "^1.20.2",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
+    "mocha": "^3.2.0",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
