@@ -1,5 +1,6 @@
 import expect from 'expect';
 import { SET_ACTIVE_VIEW, appViewActions } from '../../src/actions/appViewActions';
+import {describe, it} from "eslint";
 
 describe('actionSetActiveView', () => {
     describe('actionSetActiveStringView', () => {
