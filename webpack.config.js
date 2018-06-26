@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const webpackConfig = {
     context: __dirname + '/src',
@@ -27,23 +28,29 @@ const webpackConfig = {
                       loader: 'url-loader?limit=10000&name=images/[hash:12].[ext]'
                     }
                 ]
-  		      },
+  		    },
             {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: "style-loader"
-                    },
-                    {
-                        loader: "css-loader",
+                        loader: MiniCssExtractPlugin.loader,
                         options: {
-                          modules: true
+                          // you can specify a publicPath here
+                          // by default it use publicPath in webpackOptions.output
+                          publicPath: '../'
                         }
-                    }
+                    },
+                    "css-loader"
                 ]
-  		      }
+            }
         ]
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+          filename: "[name].css",
+          chunkFilename: "[id].css"
+        })
+      ],
     devServer: {
         historyApiFallback: true,
         inline:true,
