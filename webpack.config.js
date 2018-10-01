@@ -11,6 +11,12 @@ const webpackConfig = {
         filename: 'bundle.js'
     },
     devtool: 'source-map',
+    resolve: {
+        alias: {
+            'react-jss': path.resolve('./src/vendor/react-jss.js'),
+        },
+        extensions: ['.js', '.jsx', '.json', '*']
+    },
     module: {
   		  rules: [
             {
