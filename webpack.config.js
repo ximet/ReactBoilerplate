@@ -17,6 +17,9 @@ const webpackConfig = {
         },
         extensions: ['.js', '.jsx', '.json', '*']
     },
+    node: {
+        global: true
+    },
     module: {
   		  rules: [
             {
